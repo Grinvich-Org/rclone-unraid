@@ -193,7 +193,11 @@ if [ $? -eq 0 ]; then
   else
     echo "Downloading and installing rclone"
     curl --connect-timeout 15 --retry 3 --retry-delay 2 --retry-max-time 30 -o /boot/config/plugins/rclone/install/rclone.zip --create-dirs $rcloneurl
+    echo "Pause 1 min"
+    sleep 1m
     unzip -o -j "/boot/config/plugins/rclone/install/rclone.zip" "*/rclone" -d "/boot/config/plugins/rclone/install"
+    echo "Pause 1 min"
+    sleep 1m
     rm -f /boot/config/plugins/rclone/install/*.zip
     cp /boot/config/plugins/rclone/install/rclone /usr/sbin/rcloneorig.new
     mv /usr/sbin/rcloneorig.new /usr/sbin/rcloneorig
