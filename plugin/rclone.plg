@@ -160,13 +160,8 @@ Install script.
 -->
 <FILE Run="/bin/bash" Method="install">
 <INLINE>
-if [ -f /boot/config/plugins/rclone/install/beta ]; then
-  rcloneurl="https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip"
-  versionurl="https://beta.rclone.org/version.txt"
-else
   rcloneurl="https://github.com/tgdrive/rclone/releases/download/v1.70.1/rclone-v1.70.1-linux-amd64.zip"
   versionurl="https://downloads.rclone.org/version.txt"
-fi;	
 
 if [ -f /boot/config/plugins/rclone/install/rclone ]; then 
   cp /boot/config/plugins/rclone/install/rclone /usr/sbin/rcloneorig.new
