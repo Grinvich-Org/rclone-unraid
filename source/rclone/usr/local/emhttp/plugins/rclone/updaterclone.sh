@@ -3,7 +3,7 @@
 if [ "$1" = "2" ]; then
    rcloneurl="https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip"
 else
-   rcloneurl="https://downloads.rclone.org/rclone-current-linux-amd64.zip"
+   rcloneurl="https://github.com/tgdrive/rclone/releases/download/v1.70.1/rclone-v1.70.1-linux-amd64.zip"
 fi;
 
 version=`rcloneorig --version | head -n 1`
